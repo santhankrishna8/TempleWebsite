@@ -11,7 +11,7 @@ declare const bootstrap: any;
 })
 export class HomeComponent {
   slides: string[] = [
-    'assets/11.jpg',
+    'assets/12.jpg',
     'assets/2.jpg',
     'assets/3.jpg',
     'assets/4.jpg',
@@ -22,7 +22,7 @@ export class HomeComponent {
     'assets/9.jpg',
     'assets/10.jpg',
     'assets/1.jpg',
-    'assets/12.jpg',
+    'assets/11.jpg',
   ];
 
   currentSlide = 0;
