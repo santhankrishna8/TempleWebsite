@@ -11,6 +11,9 @@
         width:;  
     }
 } */
+html{
+    scroll-behavior: smooth;
+}
 .logo {
     height: 20vh;
     width: 100%;
@@ -64,13 +67,27 @@ li{
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
   }
-  
+  .mandali-regular {
+    font-family: "Mandali", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 3; /* Ensures it stays on top of other elements like images */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  }
   .prev {
     left: 0;
   }
   
   .next {
     right: 0;
+  }
+  .card{
+    width: 100%;
+    text-align: center;
   }
   
   @media screen and (max-width: 768px) {
@@ -111,7 +128,7 @@ li{
 @media (min-width: 601px) and (max-width: 1023px) {
     .logo {
         height: 20vh;
-        width: 90%;
+        width: 100%;
     }
 }
 
