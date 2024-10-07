@@ -1,0 +1,135 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Set the maximum width of the slider */
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    width: 1400px; /* Set the width of each image */
+    height: 400px; /* Set the height of each image */
+    object-fit: contain; /* Cover the container, maintaining aspect ratio */
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  .mandali-regular {
+    font-family: "Mandali", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  .card{
+    width: 100%;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+  }
+  pre{
+    overflow: hidden;
+  }
+  h5{
+    text-align: center;
+  }
+  .modal-title {
+    margin: 0; 
+  }
+  #modalImage {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;       /* Adjust to 100% to make it responsive */
+    height: auto;     /* Maintain aspect ratio */
+    max-height: 100vh; /* Limit the maximum height to 80% of the viewport height */
+    object-fit: cover; /* Optional: cover the area while maintaining aspect ratio */
+  }
+ 
+  
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+    .logo {
+        margin-top: -30px;
+        height: 25vh;
+        width: 100%;
+    }
+    img{
+        height:24vh;
+
+    }
+    nav{
+        margin-top: -30px;
+    }
+    .prev, .next {
+        font-size: 18px;
+        padding: 12px;
+      }
+    
+      .slider-container {
+        max-width: 100%;
+      }
+    
+      .slide {
+        width: 100%; /* Make the image full width on smaller screens */
+        height: 350px; /* Reduce the height for mobile */
+      }
+}
+
+/* Tablet (601px to 1023px) */
+@media (min-width: 601px) and (max-width: 1023px) {
+    .logo {
+        height: 20vh;
+        width: 100%;
+    }
+}
+
+/* Laptop (1024px to 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .logo {
+        height: 25vh;  /* Adjust height for laptops */
+        width: 100%; 
+        
+    }
+}
