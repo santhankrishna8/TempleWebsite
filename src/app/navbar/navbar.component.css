@@ -20,4 +20,6 @@ li{
   }
   li a{
     font-weight: bolder;
+    text-align: left;
+    margin-left: 20px;
   }
