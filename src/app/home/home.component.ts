@@ -12,6 +12,7 @@ declare const bootstrap: any;
 export class HomeComponent {
   slides: string[] = [
     'assets/13.jpg',
+    'assets/16.jpg',
     'assets/12.jpg',
     'assets/2.jpg',
     'assets/3.jpg',
@@ -26,7 +27,6 @@ export class HomeComponent {
     'assets/11.jpg',
     'assets/14.jpg',
     'assets/15.jpg',
-    'assets/16.jpg',
     'assets/17.jpg'
   ];
 
