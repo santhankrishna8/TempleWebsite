@@ -88,6 +88,11 @@ li{
   .card{
     width: 100%;
     text-align: center;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+  }
+  pre{
+    overflow: hidden;
   }
   
   @media screen and (max-width: 768px) {
