@@ -21,6 +21,15 @@
       </ul>
     </div>
   </nav>
+
+  <div class="slider-container">
+    <div class="slides">
+      <img *ngFor="let slide of slides; let i = index" [src]="slide" class="slide" [class.active]="i === currentSlide">
+    </div>
+    <button class="prev" (click)="changeSlide(-1)">&#10094;</button>
+    <button class="next" (click)="changeSlide(1)">&#10095;</button>
+  </div>
+  
   
   
   
