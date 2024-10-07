@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    text-align: center;
+    gap: 5px;
+}
+.mandali-regular {
+    font-family: "Mandali", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.l{
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+}
+.map{
+    text-align: center;
+}

@@ -10,10 +10,14 @@ html{
 }
 li{
     color:black;
+    cursor: pointer;
 }
 .navbar {
     position: absolute;
     width: 100%;
     z-index: 3; /* Ensures it stays on top of other elements like images */
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  }
+  li a{
+    font-weight: bolder;
   }
