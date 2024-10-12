@@ -1,270 +1,338 @@
 <div class="container text-center">
-    <br>
-      <div class="slider-container">
-        <div class="slides">
-          <img *ngFor="let slide of slides; let i = index" [src]="slide" class="slide" [class.active]="i === currentSlide">
-        </div>
-        <button class="prev" (click)="changeSlide(-1)">&#10094;</button>
-        <button class="next" (click)="changeSlide(1)">&#10095;</button>
-      </div>
-      <br>
-      <div>
-        <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">కృష్ణం వందే జ‌గ‌ద్గురుం</h2>
-      </div>
-    <br>
-      <div>
-        <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">గోవింద మాల పూజ విధానం</h2>
-      </div>
-      <div>
-        <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">వకుళ నందన గోవిందా గోవిందా</h2>
-      </div>
-      <br>
-      <div class="card">
-        <h1 class="mandali-regular" style="font-weight: bolder;">విష్వక్సేన ప్రార్థన</h1>
-        <p style="font-weight: bolder;" class="mandali-regular">
-          <a>యస్య ద్విరదవశ్రాద్యాః పారిషద్యాః పరశ్శతమ్</a>
-          <a>విఘ్నం నిఘ్నంతి సతతం విష్వక్సేనం తమాశ్రయే </a>
-        </p>
-      </div>
-      
-      <br>
-      <div class="card" >
-      
-        <button type="button" class="btn" (click)="openModal()">
-        <h1 class="mandali-regular" style="font-weight: bolder;">సుప్రభాతం</h1>
-        <img src="../assets/suprabhatam.jpeg" >
-      </button>
-      
-      <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">సుప్రభాతం</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img  id="modalImage" src="../assets/Screenshot 2024-10-12 112917.png">
-              <img  id="modalImage" src="../assets/Screenshot 2024-10-12 112930.png">
-              <img  id="modalImage" src="../assets/Screenshot 2024-10-12 112943.png">
-              <img  id="modalImage" src="../assets/Screenshot 2024-10-12 112954.png">
-              <img  id="modalImage" src="../assets/Screenshot 2024-10-12 113012.png">
-              <img  id="modalImage" src="../assets/Screenshot 2024-10-12 113025.png">
-            </div>
-            <!-- <div class="modal-footer">
+  <br>
+  <div class="slider-container">
+    <div class="slides">
+      <img *ngFor="let slide of slides; let i = index" [src]="slide" class="slide" [class.active]="i === currentSlide">
+    </div>
+    <button class="prev" (click)="changeSlide(-1)">&#10094;</button>
+    <button class="next" (click)="changeSlide(1)">&#10095;</button>
+  </div>
+  <br>
+  <div>
+    <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">కృష్ణం వందే జ‌గ‌ద్గురుం</h2>
+  </div>
+  <br>
+  <div>
+    <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">గోవింద మాల పూజ విధానం</h2>
+  </div>
+  <div>
+    <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">వకుళ నందన గోవిందా గోవిందా
+    </h2>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">విష్వక్సేన ప్రార్థన</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>యస్య ద్విరదవశ్రాద్యాః పారిషద్యాః పరశ్శతమ్</a>
+      <a>విఘ్నం నిఘ్నంతి సతతం విష్వక్సేనం తమాశ్రయే </a>
+    </p>
+  </div>
+
+  <br>
+  <div class="card">
+
+    <button type="button" class="btn" (click)="openModal()">
+      <h1 class="mandali-regular" style="font-weight: bolder;">సుప్రభాతం</h1>
+      <img src="../assets/suprabhatam.jpeg">
+    </button>
+
+    <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">సుప్రభాతం</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="../assets/Screenshot 2024-10-12 112917.png">
+            <img id="modalImage" src="../assets/Screenshot 2024-10-12 112930.png">
+            <img id="modalImage" src="../assets/Screenshot 2024-10-12 112943.png">
+            <img id="modalImage" src="../assets/Screenshot 2024-10-12 112954.png">
+            <img id="modalImage" src="../assets/Screenshot 2024-10-12 113012.png">
+            <img id="modalImage" src="../assets/Screenshot 2024-10-12 113025.png">
+          </div>
+          <!-- <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఆచమనం </h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>ఓం కేశవాయ స్వాహా</a>
+      <a>ఓం నారాయణాయ స్వాహా</a>
+      <a>ఓం మాధవాయ స్వాహా</a>
+      <a>(అని మూడు సార్లు నీటిని తాగవలయును.</a>
+      <a>తదుపరి హస్తము శుద్ధి చేసుకొని నమస్కరించుకొనవలయును)</a>
+      <a>ఓం గోవిందాయ నమః</a>
+      <a>ఓం విష్ణవే నమః</a>
+      <a>ఓం మధుసూదనాయ నమః</a>
+      <a>ఓం త్రివిక్రమాయ నమః</a>
+      <a>ఓం వామనాయ నమః</a>
+      <a>ఓం శ్రీధరాయ నమః</a>
+      <a>ఓం హృషీకేశాయ నమః</a>
+      <a>ఓం పద్మనాభాయ నమః</a>
+      <a>ఓం దామోదరాయ నమః</a>
+      <a>ఉత్తిష్టస్తు భూతపిశాచాః యేతే భూమిభారకాః</a>
+      <a>ఏతేషామవిరోధేన బ్రహ్మకర్మ సమారభే</a>
+      <a>(అని అక్షతలు వాసన చూసి వెనక వదలవలయును)</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ప్రాణాయామం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>ఓం భూః ఓం భువః ఓగ్ం సువః ఓం మహః ఓం జనః ఓం తపః ఓగ్స్ సత్యం ఓం తత్సవితుర్వరేణ్యం భర్గోదేవస్య ధీమహీ ధియో యోనః
+        ప్రచోదయాత్ । ఓమాపో జ్యోతిరసో మృతం బ్రహ్మ భూర్భువస్సువరోమ్
+      </a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">సంకల్పం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>హరిః ఓం
+        శ్రీ గోవింద గోవింద గోవింద శ్రీమహావిష్ణోరాజ్ఞయా ప్రవర్తమానస్య అద్యబ్రహ్మణః ద్వితీయపరార్థే శ్వేతవరాహకల్పే
+        వైవస్వతమన్వంతరే కలియుగే ప్రధమపాదే జంబూద్వీపే భరతవర్షే భరతఖండే మేరోర్దక్షిణదిగ్భాగే .................
+        మహానద్యోర్మద్యదేశే భగవద్భాగవతాచార్యాణాం సన్నిధౌ, స్వగృహే (దేవాలయప్రాంగణే) శుచౌదేశే అస్మిన్ వర్తమాన వ్యావహారిక
+        చాంద్రమానేన శ్రీప్రభవాది షష్టి సంవత్సరాణాం మధ్యే ............ నామసంవత్సరే .......... అయనే ........... ఋథౌ
+        ........ మాసే .......పక్షే ........తిధౌ........ వాసరె ...... నక్షత్రే ........ శుభయోగ శుభకరణ ఏవంగుణవిశేషణ
+        విశిష్టాయాం అస్యాం శుభతిధౌ శ్రీభగవదాజ్ఞయా భగవత్ కైంకర్యరూపం శ్రీమన్నారాయణప్రీత్యర్థం అస్య యజమానస్య ........
+        గోత్రోద్భవస్య ........ నామధేయస్య ........ ధర్మపత్నీసమేతస్య ........ నామ్న్యాః మమ సహకుటుంబానాం క్షేమ
+        స్థైర్యధైర్యవీర్యవిజయ అభయ ఆయురారోగ్య ఐశ్వర్యాభివృద్ధ్యర్థం, ధర్మార్థకామమోక్ష చతుర్విధపు రుషార్ధఫలసిద్ధ్యర్థం
+        రాజద్వారే రాజముఖే సర్వకార్య అనుకూల్యతా సిద్ధ్యర్థం, మమ గృహే మహాలక్ష్మీ స్థిరనివాససిద్ధ్యర్థం, శ్రీనివాస
+        అనుగ్రహప్రసాదసిద్ధ్యర్ధం, అస్య దేవదేవస్య భగవతో నారాయణస్య శ్రియఃపతేః పురుషోత్తమస్య శ్రీభూసమేతస్య శ్రీమదఖిలాండకోటి
+        బ్రహ్మాండనాయకస్య శేషాచలక్షేత్రాధినాధస్య, శ్రీవేంకటేశ్వరస్వామినః ప్రీత్యర్థం సంభవతాకాలేనా సంభవతాద్రవ్యేణ
+        సంభవద్భి: ఉపచారైశ్చ యధాశక్తి శ్రీభూసమేత శ్రీ వేంకటేశ్వరస్వామినః ప్రాతఃకాలే/సాయంకాలే విశేషపూజాం కరిష్యే</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ధ్యానం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశం ధ్యాయామి।</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఆవాహనం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశమావాహయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఆసనం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః సువర్ణరత్నఖచిత దివ్యసింహాసనం సమర్పయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">పాద్యం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పాద్యం సమర్పయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">అర్ఘ్యం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీమాసమేత శ్రీవేంకటేశ్వరస్వామినే నమః అర్ఘ్యం సమర్పయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఆచమనం </h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః ఆచమనం సమర్పయాన్ని</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">స్నానం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః స్నానం సమర్పయామి.</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ప్లోతం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పోతేన విమృజామి</a>
+      <a>(శ్రీవేంకటేశ్వరస్వామివారిని పుష్పముతో స్తోతం (తుడుచుట) గావించవలయును).</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">వస్త్రం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పస్త్రయుగ్మం సమర్పయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఊర్ధ్వపుండ్రం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః ఊర్ధ్వపుండ్రం ధారయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఉపవీతం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః యజ్ఞోపవీతం సమర్పయామి. యజ్ఞోపవీతార్ధం అక్షతాన్ సమర్పయామి.</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">ఆభరణం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః ఆభరణైరలంకరోమి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">గంధం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః గంధమాలేపయామి.</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <h1 class="mandali-regular" style="font-weight: bolder;">పుష్పం</h1>
+    <p style="font-weight: bolder;" class="mandali-regular">
+      <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పుష్పాణి సమర్పయామి</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <button type="button" class="btn" (click)="openModal()">
+      <h1 class="mandali-regular" style="font-weight: bolder;">గోవింద నామాలు</h1>
+      <img style="object-fit: contain;" src="/src/assets/1.jpg">
+    </button>
+
+    <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">గోవింద నామాలు</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="/src/assets/a1.jpg">
+            <img id="modalImage" src="/src/assets/a2.jpg">
+            <img id="modalImage" src="/src/assets/a3.jpg">
+            <img id="modalImage" src="/src/assets/a4.jpg">
+            <img id="modalImage" src="/src/assets/a5.jpg">
           </div>
         </div>
       </div>
     </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ఆచమనం </h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>ఓం కేశవాయ స్వాహా</a>
-        <a>ఓం నారాయణాయ స్వాహా</a>
-        <a>ఓం మాధవాయ స్వాహా</a>
-        <a>(అని మూడు సార్లు నీటిని తాగవలయును.</a>
-        <a>తదుపరి హస్తము శుద్ధి చేసుకొని నమస్కరించుకొనవలయును)</a>
-        <a>ఓం గోవిందాయ నమః</a>
-        <a>ఓం విష్ణవే నమః</a>
-        <a>ఓం మధుసూదనాయ నమః</a>
-        <a>ఓం త్రివిక్రమాయ నమః</a>
-        <a>ఓం వామనాయ నమః</a>
-        <a>ఓం శ్రీధరాయ నమః</a>
-        <a>ఓం హృషీకేశాయ నమః</a>
-        <a>ఓం పద్మనాభాయ నమః</a>
-        <a>ఓం దామోదరాయ నమః</a>
-        <a>ఉత్తిష్టస్తు భూతపిశాచాః యేతే భూమిభారకాః</a> 
-        <a>ఏతేషామవిరోధేన బ్రహ్మకర్మ సమారభే</a>
-        <a>(అని అక్షతలు వాసన చూసి వెనక వదలవలయును)</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ప్రాణాయామం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>ఓం భూః ఓం భువః ఓగ్ం సువః ఓం మహః ఓం జనః ఓం తపః ఓగ్స్ సత్యం ఓం తత్సవితుర్వరేణ్యం భర్గోదేవస్య ధీమహీ ధియో యోనః ప్రచోదయాత్ । ఓమాపో జ్యోతిరసో మృతం బ్రహ్మ భూర్భువస్సువరోమ్ 
-          </a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">సంకల్పం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>హరిః ఓం
-          శ్రీ గోవింద గోవింద గోవింద శ్రీమహావిష్ణోరాజ్ఞయా ప్రవర్తమానస్య అద్యబ్రహ్మణః ద్వితీయపరార్థే శ్వేతవరాహకల్పే వైవస్వతమన్వంతరే కలియుగే ప్రధమపాదే జంబూద్వీపే భరతవర్షే భరతఖండే మేరోర్దక్షిణదిగ్భాగే ................. మహానద్యోర్మద్యదేశే భగవద్భాగవతాచార్యాణాం సన్నిధౌ, స్వగృహే (దేవాలయప్రాంగణే) శుచౌదేశే అస్మిన్ వర్తమాన వ్యావహారిక చాంద్రమానేన శ్రీప్రభవాది షష్టి సంవత్సరాణాం మధ్యే ............ నామసంవత్సరే .......... అయనే ........... ఋథౌ ........ మాసే .......పక్షే ........తిధౌ........ వాసరె ...... నక్షత్రే ........ శుభయోగ శుభకరణ ఏవంగుణవిశేషణ విశిష్టాయాం అస్యాం శుభతిధౌ శ్రీభగవదాజ్ఞయా భగవత్ కైంకర్యరూపం శ్రీమన్నారాయణప్రీత్యర్థం అస్య యజమానస్య ........ గోత్రోద్భవస్య ........ నామధేయస్య ........ ధర్మపత్నీసమేతస్య ........ నామ్న్యాః మమ సహకుటుంబానాం క్షేమ స్థైర్యధైర్యవీర్యవిజయ అభయ ఆయురారోగ్య ఐశ్వర్యాభివృద్ధ్యర్థం, ధర్మార్థకామమోక్ష చతుర్విధపు రుషార్ధఫలసిద్ధ్యర్థం రాజద్వారే రాజముఖే సర్వకార్య అనుకూల్యతా సిద్ధ్యర్థం, మమ గృహే మహాలక్ష్మీ స్థిరనివాససిద్ధ్యర్థం, శ్రీనివాస అనుగ్రహప్రసాదసిద్ధ్యర్ధం, అస్య దేవదేవస్య భగవతో నారాయణస్య శ్రియఃపతేః పురుషోత్తమస్య శ్రీభూసమేతస్య శ్రీమదఖిలాండకోటి బ్రహ్మాండనాయకస్య శేషాచలక్షేత్రాధినాధస్య, శ్రీవేంకటేశ్వరస్వామినః ప్రీత్యర్థం సంభవతాకాలేనా సంభవతాద్రవ్యేణ సంభవద్భి: ఉపచారైశ్చ యధాశక్తి శ్రీభూసమేత శ్రీ వేంకటేశ్వరస్వామినః ప్రాతఃకాలే/సాయంకాలే విశేషపూజాం కరిష్యే</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ధ్యానం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశం ధ్యాయామి।</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ఆవాహనం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశమావాహయామి</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ఆసనం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః సువర్ణరత్నఖచిత దివ్యసింహాసనం సమర్పయామి</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">పాద్యం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పాద్యం సమర్పయామి</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">అర్ఘ్యం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీమాసమేత శ్రీవేంకటేశ్వరస్వామినే నమః అర్ఘ్యం సమర్పయామి</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ఆచమనం </h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః ఆచమనం సమర్పయాన్ని</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">స్నానం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః స్నానం సమర్పయామి.</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ప్లోతం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పోతేన విమృజామి</a>
-        <a>(శ్రీవేంకటేశ్వరస్వామివారిని పుష్పముతో స్తోతం (తుడుచుట) గావించవలయును).</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">వస్త్రం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః పస్త్రయుగ్మం సమర్పయామి</a>
-      </p>
-    </div>
-    <br>
-    <div class="card">
-      <h1 class="mandali-regular" style="font-weight: bolder;">ఊర్ధ్వపుండ్రం</h1>
-      <p style="font-weight: bolder;" class="mandali-regular">
-        <a>శ్రీభూసమేత శ్రీవేంకటేశ్వరస్వామినే నమః ఊర్ధ్వపుండ్రం ధారయామి</a>
-      </p>
-    </div>
-    <br>
-      <div class="card">
-        <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px; text-align: center;">
-     <a>ఓం నమోభగవతే</a>
-    <a>శ్రీ విఘ్నేశ్వర స్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ వరాహ స్వామి పరబ్రహ్మనే నమః</a>
-    <a> శ్రీ గోవింద రాజు స్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ కృష్ణ స్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ ఆంజనేయ స్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ వరదరాజస్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ నరసింహ స్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ సీతా రామ స్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ పార్వతీ పరమేశ్వరస్వామి పరబ్రహ్మనే నమః</a>
-    <a>శ్రీ లక్ష్మీ వేంకటేశ్వరస్వామి పరబ్రహ్మనే నమః</a>
-    <a></a>
-  </p>
-      </div>
-    <br>
-    
-      <div class="card">
-        <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;text-align: center;">
-    <a>శేషాద్రి నిలయా గోవిందా</a>
-            <a>గరుడాద్రినిలయా గోవిందా</a>
-            <a>పృషభాద్రి నిలయా గోవిందా </a>
-            <a>అంజనాద్రి నిలయా గోవింద</a>
-            <a>నీలాద్రి  నిలయా గోవిందా</a>
-            <a>వెంకటాద్రి నిలయా గోవిందా</a>
-            <a>నారాయణాద్రి నిలయా గోవిందా</a>
-            <a>తల్లి తండ్రివని గోవిందా</a>
-            <a>మిమ్ము నమ్మితిమి గోవిందా</a>
-            <a>మీ పదములనూ గోవిందా</a>
-            <a>ఆశ్రయించింతమి గోవిందా</a>
-            <a>మమ్ము బ్రోవుమూ గోవిందా</a>
-            <a>మా మోరలింపుము గోవిందా</a>
-            <a>శ్రీ శ్రీనివాస గోవిందా</a>
-            <a>శ్రీ వెంకటేశ గోవిందా</a></p>
-      </div>
-    <br>
-    <div class="card" >
-      
-        <button type="button" class="btn" (click)="openModal()">
-        <h1 class="mandali-regular" style="font-weight: bolder;">గోవింద నామాలు</h1>
-          <img style="object-fit: contain;" src="../assets/govinda_namalu.webp">
-        </button>
-      
-        <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">గోవింద నామాలు</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img  id="modalImage" src="../assets/n1.jpg">
-              <img  id="modalImage" src="../assets/n2.jpg">
-              <img  id="modalImage" src="../assets/n3.jpg">
-            </div>
-            <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div> -->
+  </div>
+  
+  <br>
+  <div class="card">
+    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px; text-align: center;">
+      <a>ఓం నమోభగవతే</a>
+      <a>శ్రీ విఘ్నేశ్వర స్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ వరాహ స్వామి పరబ్రహ్మనే నమః</a>
+      <a> శ్రీ గోవింద రాజు స్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ కృష్ణ స్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ ఆంజనేయ స్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ వరదరాజస్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ నరసింహ స్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ సీతా రామ స్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ పార్వతీ పరమేశ్వరస్వామి పరబ్రహ్మనే నమః</a>
+      <a>శ్రీ లక్ష్మీ వేంకటేశ్వరస్వామి పరబ్రహ్మనే నమః</a>
+      <a></a>
+    </p>
+  </div>
+  <br>
+
+  <div class="card">
+    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;text-align: center;">
+      <a>శేషాద్రి నిలయా గోవిందా</a>
+      <a>గరుడాద్రినిలయా గోవిందా</a>
+      <a>పృషభాద్రి నిలయా గోవిందా </a>
+      <a>అంజనాద్రి నిలయా గోవింద</a>
+      <a>నీలాద్రి నిలయా గోవిందా</a>
+      <a>వెంకటాద్రి నిలయా గోవిందా</a>
+      <a>నారాయణాద్రి నిలయా గోవిందా</a>
+      <a>తల్లి తండ్రివని గోవిందా</a>
+      <a>మిమ్ము నమ్మితిమి గోవిందా</a>
+      <a>మీ పదములనూ గోవిందా</a>
+      <a>ఆశ్రయించింతమి గోవిందా</a>
+      <a>మమ్ము బ్రోవుమూ గోవిందా</a>
+      <a>మా మోరలింపుము గోవిందా</a>
+      <a>శ్రీ శ్రీనివాస గోవిందా</a>
+      <a>శ్రీ వెంకటేశ గోవిందా</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <button type="button" class="btn" (click)="openModal()">
+      <h1 class="mandali-regular" style="font-weight: bolder;">గోవింద నామాలు</h1>
+      <img style="object-fit: contain;" src="../assets/govinda_namalu.webp">
+    </button>
+
+    <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">గోవింద నామాలు</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="../assets/n1.jpg">
+            <img id="modalImage" src="../assets/n2.jpg">
+            <img id="modalImage" src="../assets/n3.jpg">
           </div>
         </div>
       </div>
     </div>
-    <br>
-    
-    
-      <div class="card">
-        <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;" ><a>జ్ఞానము తోనూ అజ్ఞానము తోనూ తెలిసీ, </a>
-            <a>తెలియక మేము చేయు సకల తప్పులను క్షమించి </a>
-      <a>మన్నించి  కాపాడ వలెను.</a> 
+  </div>
+  <br>
+
+
+  <div class="card">
+    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;"><a>జ్ఞానము తోనూ అజ్ఞానము తోనూ
+        తెలిసీ, </a>
+      <a>తెలియక మేము చేయు సకల తప్పులను క్షమించి </a>
+      <a>మన్నించి కాపాడ వలెను.</a>
       <a>తిరు నామము, </a>
       <a>శెంకుచక్రము, </a>
       <a>లక్ష్మి హారములు దరించి </a>
       <a>ఏడు కొండలపై వెలసియుండు </a>
       <a>ఓ కలియుగ వరదా</a>
       <a>ఓ కోనేటిరాయా</a>
-      <a>ఓ మలయప్ప స్వామి   </a>       
+      <a>ఓ మలయప్ప స్వామి </a>
       <a>ఓ తిరుమలరాయా </a>
-      <a>ఓ వకుళా నందనా  </a>     
+      <a>ఓ వకుళా నందనా </a>
       <a>ఓ లక్ష్మీ వెంకటేశ్వర స్వామీ </a>
-      <a>మీ పాదారవిందములే మాకు శరణం శరణం</a> </p>
-      </div>
-      <br>
-      <div class="card">
-        <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 2px;"> <a>ఓం నారాయణ ఓం నారాయణ ఓం నారాయణ </a>
-            <a>సర్వేజనా సుఖినోభవంతు </a>
-            <a>సమస్త సమంగళాని రస్తు</a>
-            <a>పుత్తరోత్తరాభి వృద్ధి రస్తు </a>
-            <a>సర్వం శ్రీ లక్ష్మీ వేంకటేశ్వరార్పణమస్తు. </a>
-            <a>సర్వం శ్రీ సీతా రామచంద్రార్పణ మస్తు.</a>
-            <a>సర్వం శ్రీ పార్వతీ పరమేశ్వరార్పణ మస్తు. </a>
-            <a>సర్వం శ్రీ ఆంజనేయార్పణ మస్తు</a>
-            <a>సర్వం శ్రీ కృష్ణార్పణమస్తు</a>
-            <a>శాంతి-శాంతి- శాంతిః </a>
-            <a>హరిః ఓం తత్-సత్</a></p>
-      </div>
-      <br>
-      <br> 
-      
-    </div>
+      <a>మీ పాదారవిందములే మాకు శరణం శరణం</a>
+    </p>
+  </div>
+  <br>
+  <div class="card">
+    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 2px;"> <a>ఓం నారాయణ ఓం నారాయణ ఓం
+        నారాయణ </a>
+      <a>సర్వేజనా సుఖినోభవంతు </a>
+      <a>సమస్త సమంగళాని రస్తు</a>
+      <a>పుత్తరోత్తరాభి వృద్ధి రస్తు </a>
+      <a>సర్వం శ్రీ లక్ష్మీ వేంకటేశ్వరార్పణమస్తు. </a>
+      <a>సర్వం శ్రీ సీతా రామచంద్రార్పణ మస్తు.</a>
+      <a>సర్వం శ్రీ పార్వతీ పరమేశ్వరార్పణ మస్తు. </a>
+      <a>సర్వం శ్రీ ఆంజనేయార్పణ మస్తు</a>
+      <a>సర్వం శ్రీ కృష్ణార్పణమస్తు</a>
+      <a>శాంతి-శాంతి- శాంతిః </a>
+      <a>హరిః ఓం తత్-సత్</a>
+    </p>
+  </div>
+  <br>
+  <br>
+
+</div>
