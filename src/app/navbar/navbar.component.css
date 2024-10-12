@@ -8,6 +8,9 @@ html{
     object-fit: contain;
    
 }
+ul{
+    display: flex;
+}
 li{
     color:black;
     cursor: pointer;
