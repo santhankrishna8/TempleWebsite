@@ -210,29 +210,29 @@
   </div>
   <br>
   <div class="card">
-    <button type="button" class="btn" (click)="openModal()">
-      <h1 class="mandali-regular" style="font-weight: bolder;">గోవింద నామాలు</h1>
-      <img style="object-fit: contain;" src="/src/assets/1.jpg">
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#simpleModal2">
+      <h1 class="mandali-regular" style="font-weight: bolder;">అష్తోతరశతమార్చన</h1>
+      <img src="assets/asn.png" alt="Another Image">
     </button>
-
-    <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="simpleModal2" tabindex="-1" aria-labelledby="simpleModalLabel2" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">గోవింద నామాలు</h5>
+            <h5 class="mandali-regular" id="simpleModalLabel2" style="text-align: center;">అష్తోతరశతమార్చన</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <img id="modalImage" src="/src/assets/a1.jpg">
-            <img id="modalImage" src="/src/assets/a2.jpg">
-            <img id="modalImage" src="/src/assets/a3.jpg">
-            <img id="modalImage" src="/src/assets/a4.jpg">
-            <img id="modalImage" src="/src/assets/a5.jpg">
+          <div class="modal-body" style="display: flex;flex-direction: column;width:auto;">
+            <img style="height: max-content;" src="/assets/a1.jpg" alt="Govinda Namalu Page 1">
+            <img style="height: max-content;" src="/assets/a2.jpg" alt="Govinda Namalu Page 2">
+            <img style="height: max-content;" src="/assets/a3.jpg" alt="Govinda Namalu Page 3">
+            <img style="height: max-content;" src="/assets/a4.jpg" alt="Govinda Namalu Page 4">
+            <img style="height: max-content;" src="/assets/a5.jpg" alt="Govinda Namalu Page 5">
           </div>
         </div>
       </div>
     </div>
   </div>
+  
   
   <br>
   <div class="card">
@@ -273,30 +273,30 @@
     </p>
   </div>
   <br>
+  
   <div class="card">
-    <button type="button" class="btn" (click)="openModal()">
-      <h1 class="mandali-regular" style="font-weight: bolder;">గోవింద నామాలు</h1>
-      <img style="object-fit: contain;" src="../assets/govinda_namalu.webp">
-    </button>
-
-    <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="simpleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="mandali-regular" id="simpleModalLabel" style="text-align: center;">గోవింద నామాలు</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img id="modalImage" src="../assets/n1.jpg">
-            <img id="modalImage" src="../assets/n2.jpg">
-            <img id="modalImage" src="../assets/n3.jpg">
-          </div>
+    <img src="assets/gn.jpeg" alt="Thumbnail" class="img-fluid" style="cursor: pointer;object-fit: contain;" data-bs-toggle="modal" data-bs-target="#imageModal">
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">గోవింద నామాలు</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="display: flex;flex-direction: column;object-fit: contain;">
+          <!-- Full-sized image inside the modal -->
+            <img style="height: max-content;" class="img-fluid" src="assets/n1.jpg" alt="Govinda Namalu Page 1">
+            <img style="height: max-content;" class="img-fluid" src="assets/n2.jpg" alt="Govinda Namalu Page 2">
+            <img style="height: max-content;" class="img-fluid" src="assets/n3.jpg" alt="Govinda Namalu Page 3">
         </div>
       </div>
     </div>
   </div>
+  
   <br>
-
 
   <div class="card">
     <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;"><a>జ్ఞానము తోనూ అజ్ఞానము తోనూ
