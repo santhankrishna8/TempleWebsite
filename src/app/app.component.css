@@ -12,7 +12,13 @@
     }
 } */
 
-html{
+body{
     scroll-behavior: smooth;
+    border-top: 30px solid rgb(218, 104, 47);
+    border-bottom: 30px solid rgb(218, 104, 47);
+    border-left: 5px solid rgb(218, 104, 47);
+    border-right: 5px solid rgb(218, 104, 47);
+    border-radius: 15px;
+    margin: auto;
 }
 

@@ -10,21 +10,32 @@ html{
 }
 ul{
     display: flex;
+    gap: -40px;
 }
 li{
     color:black;
     cursor: pointer;
     text-decoration: none;
+    list-style: none;
 }
 .navbar {
     position: absolute;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    left: 0;
     z-index: 3; /* Ensures it stays on top of other elements like images */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-  }
-  li a{
-    font-weight: bolder;
+    /* background-color: rgba(255, 255, 255, 0.7);  */
+    background-color: rgb(211, 97, 15);
+    border: 1px solid orange;
+    border-radius: 20px;
+}
+li a{
+      color: white;
+    /* font-weight: bolder; */
     text-align: left;
-    margin-left: 20px;
     text-decoration: none;
   }
+  
