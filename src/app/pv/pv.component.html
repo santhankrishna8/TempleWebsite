@@ -25,6 +25,11 @@
 
     <li class="reader" id="s-sp">
       <app-reader title="సుప్రభాతం" thumb="assets/suprabhatam.jpeg" [pages]="suprabhatam"></app-reader>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/krGYd5tZe0A?si=xtA-IMTDHjHvw8oD" title="సుప్రభాతం — YouTube"
+          loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </li>
 
     @for (s of steps; track i; let i = $index) {
