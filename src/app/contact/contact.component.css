@@ -1,18 +1,38 @@
-.container{
-    display: flex;
-    text-align: center;
-    gap: 5px;
+.intro { text-align: center; margin-bottom: 40px; }
+.intro .display { margin-top: 8px; }
+
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+.person {
+  display: grid;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
 }
-.mandali-regular {
-    font-family: "Mandali", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.l{
-    display: flex;
-    flex: 0.5;
-    flex-direction: column;
+.role { color: var(--gold); font-weight: 600; font-size: 0.9375rem; }
+.person strong { font-family: var(--serif); }
+.person strong { font-size: 1.375rem; }
+.phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--accent);
+  font: 600 1rem var(--sans);
+  font-variant-numeric: tabular-nums;
 }
-.map{
-    text-align: center;
+
+.map { padding: 0; overflow: hidden; margin-top: 24px; }
+.map iframe { display: block; width: 100%; height: 360px; border: 0; }
+.map-foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  padding: 16px 20px;
+  color: var(--text-2);
+}
+
+@media (max-width: 720px) {
+  .intro { margin-bottom: 24px; }
+  .people { gap: 12px; }
+  .person strong { font-size: 1.2rem; }
+  .map { margin-top: 16px; }
+  .map iframe { height: 280px; }
+  .map-foot { padding: 14px 16px 16px; }
+  .map-foot .btn { width: 100%; }
 }

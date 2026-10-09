@@ -1,127 +1,111 @@
-<div class="container text-center">
-  <br>
-  <div class="slider-container">
-    <div class="slides">
-      <img *ngFor="let slide of slides; let i = index" [src]="slide" class="slide" [class.active]="i === currentSlide">
+<div class="page">
+  <section class="hero">
+    <div class="banner">
+      <img src="assets/image.png" width="1131" height="306"
+           alt="శ్రీ కృష్ణ భజన మందిరము — శ్రీ రుక్మిణి, సత్యభామ సమేత శ్రీ వేణుగోపాల స్వామి ఆలయము, పేరూరు">
     </div>
-    <button class="prev" (click)="changeSlide(-1)">&#10094;</button>
-    <button class="next" (click)="changeSlide(1)">&#10095;</button>
-  </div>
-  <br>
-  <div>
-    <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">కృష్ణం వందే జ‌గ‌ద్గురుం</h2>
-  </div>
-  <br>
-  <div>
-    <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">గోవింద మాల పూజ విధానం</h2>
-  </div>
-  <div>
-    <h2 style="color: red;text-align: center;font-weight: bolder;" class="mandali-regular">వకుళ నందన గోవిందా గోవిందా
-    </h2>
-  </div>
-  <br>
- 
-  
-  
-  <br>
-  <div class="card">
-    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px; text-align: center;">
-      <a>ఓం నమోభగవతే</a>
-      <a>శ్రీ విఘ్నేశ్వర స్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ వరాహ స్వామి పరబ్రహ్మనే నమః</a>
-      <a> శ్రీ గోవింద రాజు స్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ కృష్ణ స్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ ఆంజనేయ స్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ వరదరాజస్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ నరసింహ స్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ సీతా రామ స్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ పార్వతీ పరమేశ్వరస్వామి పరబ్రహ్మనే నమః</a>
-      <a>శ్రీ లక్ష్మీ వేంకటేశ్వరస్వామి పరబ్రహ్మనే నమః</a>
-      <a></a>
-    </p>
-  </div>
-  <br>
-
-  <div class="card">
-    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;text-align: center;">
-      <a>శేషాద్రి నిలయా గోవిందా</a>
-      <a>గరుడాద్రినిలయా గోవిందా</a>
-      <a>పృషభాద్రి నిలయా గోవిందా </a>
-      <a>అంజనాద్రి నిలయా గోవింద</a>
-      <a>నీలాద్రి నిలయా గోవిందా</a>
-      <a>వెంకటాద్రి నిలయా గోవిందా</a>
-      <a>నారాయణాద్రి నిలయా గోవిందా</a>
-      <a>తల్లి తండ్రివని గోవిందా</a>
-      <a>మిమ్ము నమ్మితిమి గోవిందా</a>
-      <a>మీ పదములనూ గోవిందా</a>
-      <a>ఆశ్రయించింతమి గోవిందా</a>
-      <a>మమ్ము బ్రోవుమూ గోవిందా</a>
-      <a>మా మోరలింపుము గోవిందా</a>
-      <a>శ్రీ శ్రీనివాస గోవిందా</a>
-      <a>శ్రీ వెంకటేశ గోవిందా</a>
-    </p>
-  </div>
-  <br>
-  
-  <div class="card">
-    <img src="assets/gn.jpeg" alt="Thumbnail" class="img-fluid" style="cursor: pointer;object-fit: contain;" data-bs-toggle="modal" data-bs-target="#imageModal">
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="imageModalLabel">గోవింద నామాలు</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style="display: flex;flex-direction: column;object-fit: contain;">
-          <!-- Full-sized image inside the modal -->
-            <img style="height: max-content;" class="img-fluid" src="assets/n1.jpg" alt="Govinda Namalu Page 1">
-            <img style="height: max-content;" class="img-fluid" src="assets/n2.jpg" alt="Govinda Namalu Page 2">
-            <img style="height: max-content;" class="img-fluid" src="assets/n3.jpg" alt="Govinda Namalu Page 3">
-        </div>
-      </div>
+    <p class="eyebrow">కృష్ణం వందే జగద్గురుం</p>
+    <h1 class="display">గోవింద మాల పూజ విధానం</h1>
+    <p class="lede">వకుళ నందన గోవిందా గోవిందా</p>
+    <div class="actions">
+      <a class="btn pressable" routerLink="/pv">పూజ విధానం చూడండి</a>
+      <a class="btn ghost pressable" routerLink="/contact">దారి తెలుసుకోండి</a>
     </div>
-  </div>
-  
-  <br>
+  </section>
 
-  <div class="card">
-    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 3px;"><a>జ్ఞానము తోనూ అజ్ఞానము తోనూ
-        తెలిసీ, </a>
-      <a>తెలియక మేము చేయు సకల తప్పులను క్షమించి </a>
-      <a>మన్నించి కాపాడ వలెను.</a>
-      <a>తిరు నామము, </a>
-      <a>శెంకుచక్రము, </a>
-      <a>లక్ష్మి హారములు దరించి </a>
-      <a>ఏడు కొండలపై వెలసియుండు </a>
-      <a>ఓ కలియుగ వరదా</a>
-      <a>ఓ కోనేటిరాయా</a>
-      <a>ఓ మలయప్ప స్వామి </a>
-      <a>ఓ తిరుమలరాయా </a>
-      <a>ఓ వకుళా నందనా </a>
-      <a>ఓ లక్ష్మీ వెంకటేశ్వర స్వామీ </a>
-      <a>మీ పాదారవిందములే మాకు శరణం శరణం</a>
-    </p>
-  </div>
-  <br>
-  <div class="card">
-    <p class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 2px;"> <a>ఓం నారాయణ ఓం నారాయణ ఓం
-        నారాయణ </a>
-      <a>సర్వేజనా సుఖినోభవంతు </a>
-      <a>సమస్త సమంగళాని రస్తు</a>
-      <a>పుత్తరోత్తరాభి వృద్ధి రస్తు </a>
-      <a>సర్వం శ్రీ లక్ష్మీ వేంకటేశ్వరార్పణమస్తు. </a>
-      <a>సర్వం శ్రీ సీతా రామచంద్రార్పణ మస్తు.</a>
-      <a>సర్వం శ్రీ పార్వతీ పరమేశ్వరార్పణ మస్తు. </a>
-      <a>సర్వం శ్రీ ఆంజనేయార్పణ మస్తు</a>
-      <a>సర్వం శ్రీ కృష్ణార్పణమస్తు</a>
-      <a>శాంతి-శాంతి- శాంతిః </a>
-      <a>హరిః ఓం తత్-సత్</a>
-    </p>
-  </div>
-  <br>
-  <br>
+  <section class="gallery" aria-roledescription="carousel" aria-label="ఆలయ చిత్రాలు">
+    <div #track class="track" (scroll)="onScroll(track)" tabindex="0">
+      @for (s of slides; track s; let i = $index) {
+        <img [src]="s" [alt]="'ఆలయ చిత్రం ' + (i + 1)" [attr.loading]="i < 2 ? 'eager' : 'lazy'">
+      }
+    </div>
+    <div class="controls">
+      <button type="button" class="icon-btn pressable" aria-label="మునుపటి" (click)="step(track, -1)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <span class="count" aria-live="polite">{{ current + 1 }} / {{ slides.length }}</span>
+      <button type="button" class="icon-btn pressable" aria-label="తదుపరి" (click)="step(track, 1)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </section>
 
+  <section class="stack">
+    <article class="card">
+      <h2 class="title">ఓం నమోభగవతే</h2>
+      <p class="verses">
+        <span>శ్రీ విఘ్నేశ్వర స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ వరాహ స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ గోవింద రాజు స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ కృష్ణ స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ ఆంజనేయ స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ వరదరాజస్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ నరసింహ స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ సీతా రామ స్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ పార్వతీ పరమేశ్వరస్వామి పరబ్రహ్మనే నమః</span>
+        <span>శ్రీ లక్ష్మీ వేంకటేశ్వరస్వామి పరబ్రహ్మనే నమః</span>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="title">గోవింద నామం</h2>
+      <p class="verses">
+        <span>శేషాద్రి నిలయా గోవిందా</span>
+        <span>గరుడాద్రినిలయా గోవిందా</span>
+        <span>పృషభాద్రి నిలయా గోవిందా</span>
+        <span>అంజనాద్రి నిలయా గోవింద</span>
+        <span>నీలాద్రి నిలయా గోవిందా</span>
+        <span>వెంకటాద్రి నిలయా గోవిందా</span>
+        <span>నారాయణాద్రి నిలయా గోవిందా</span>
+        <span>తల్లి తండ్రివని గోవిందా</span>
+        <span>మిమ్ము నమ్మితిమి గోవిందా</span>
+        <span>మీ పదములనూ గోవిందా</span>
+        <span>ఆశ్రయించింతమి గోవిందా</span>
+        <span>మమ్ము బ్రోవుమూ గోవిందా</span>
+        <span>మా మోరలింపుము గోవిందా</span>
+        <span>శ్రీ శ్రీనివాస గోవిందా</span>
+        <span>శ్రీ వెంకటేశ గోవిందా</span>
+      </p>
+    </article>
+
+    <app-reader title="గోవింద నామాలు" thumb="assets/gn.jpeg"
+                [pages]="['assets/n1.jpg', 'assets/n2.jpg', 'assets/n3.jpg']"></app-reader>
+
+    <article class="card">
+      <h2 class="title">క్షమా ప్రార్థన</h2>
+      <p class="verses">
+        <span>జ్ఞానము తోనూ అజ్ఞానము తోనూ తెలిసీ,</span>
+        <span>తెలియక మేము చేయు సకల తప్పులను క్షమించి</span>
+        <span>మన్నించి కాపాడ వలెను.</span>
+        <span>తిరు నామము,</span>
+        <span>శెంకుచక్రము,</span>
+        <span>లక్ష్మి హారములు దరించి</span>
+        <span>ఏడు కొండలపై వెలసియుండు</span>
+        <span>ఓ కలియుగ వరదా</span>
+        <span>ఓ కోనేటిరాయా</span>
+        <span>ఓ మలయప్ప స్వామి</span>
+        <span>ఓ తిరుమలరాయా</span>
+        <span>ఓ వకుళా నందనా</span>
+        <span>ఓ లక్ష్మీ వెంకటేశ్వర స్వామీ</span>
+        <span>మీ పాదారవిందములే మాకు శరణం శరణం</span>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="title">మంగళం</h2>
+      <p class="verses">
+        <span>ఓం నారాయణ ఓం నారాయణ ఓం నారాయణ</span>
+        <span>సర్వేజనా సుఖినోభవంతు</span>
+        <span>సమస్త సమంగళాని రస్తు</span>
+        <span>పుత్తరోత్తరాభి వృద్ధి రస్తు</span>
+        <span>సర్వం శ్రీ లక్ష్మీ వేంకటేశ్వరార్పణమస్తు.</span>
+        <span>సర్వం శ్రీ సీతా రామచంద్రార్పణ మస్తు.</span>
+        <span>సర్వం శ్రీ పార్వతీ పరమేశ్వరార్పణ మస్తు.</span>
+        <span>సర్వం శ్రీ ఆంజనేయార్పణ మస్తు</span>
+        <span>సర్వం శ్రీ కృష్ణార్పణమస్తు</span>
+        <span>శాంతి-శాంతి- శాంతిః</span>
+        <span>హరిః ఓం తత్-సత్</span>
+      </p>
+    </article>
+  </section>
 </div>

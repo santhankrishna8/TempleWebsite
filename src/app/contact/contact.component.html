@@ -1,21 +1,29 @@
-<br>
-<h1 class="text-center mandali-regular">Contact</h1>
-<div class="container">
-    <div class="l">
-        <a class="mandali-regular" style="font-weight: bolder;font-size: 1.1rem;padding: 2px;text-decoration: none;color: green;">ధర్మకర్త </a>
-        <a class="mandali-regular" style="font-weight: bolder;font-size: 1.3rem;padding: 2px;text-decoration: none;color: red;">శ్రీ నల్లందుల సిద్ధా రెడ్డి</a>
-        <a class="mandali-regular" style="font-size: 1rem;padding: 2px;text-decoration: none;color: black;">సెల్.9490418078</a>
-    </div>
-    <div class="l">
-        <a class="mandali-regular" style="font-weight: bolder;font-size: 1.1rem;padding: 2px;text-decoration: none;color: green;">అర్చకులు</a>
-        <a class="mandali-regular" style="font-weight: bold;font-size: 1.3rem;padding: 2px;text-decoration: none;color: red;">శ్రీ వేలవేటి బాలకృష్ణ</a>
-        <a class="mandali-regular" style="font-size: 1rem;padding: 2px;text-decoration: none;color: black;">సెల్.9347580090</a>
-    </div>
-</div><br>
-<div class="map">
+<div class="page">
+  <header class="intro">
+    <p class="eyebrow">పేరూరు గ్రామం, తిరుపతి రూరల్</p>
+    <h1 class="display">సంప్రదించండి</h1>
+  </header>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15511.445756792798!2d79.37064960000001!3d13.6052736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2b4b31c6cfbef%3A0x72e89acfeaf5a7c8!2sLord%20Krishna%20Temple!5e0!3m2!1sen!2sin!4v1728288925190!5m2!1sen!2sin"  width="300" height="250" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div><br>
-<div class="directions text-center">
-    <a class="btn btn-primary" href="https://maps.app.goo.gl/tg2HkZZoBuP1jMaF9" target="_blank">Get Directions</a>
+  <div class="people">
+    @for (p of people; track p.phone) {
+      <a class="card person pressable" [href]="'tel:+91' + p.phone">
+        <span class="role">{{ p.role }}</span>
+        <strong>{{ p.name }}</strong>
+        <span class="phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          {{ p.phone }}
+        </span>
+      </a>
+    }
+  </div>
+
+  <section class="card map">
+    <iframe title="ఆలయ స్థానం — Google Maps"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15511.445756792798!2d79.37064960000001!3d13.6052736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2b4b31c6cfbef%3A0x72e89acfeaf5a7c8!2sLord%20Krishna%20Temple!5e0!3m2!1sen!2sin!4v1728288925190!5m2!1sen!2sin"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="map-foot">
+      <span>శ్రీ కృష్ణ భజన మందిరము, పేరూరు - 517 505</span>
+      <a class="btn pressable" href="https://maps.app.goo.gl/tg2HkZZoBuP1jMaF9" target="_blank" rel="noopener">దారి చూపించు</a>
+    </div>
+  </section>
 </div>

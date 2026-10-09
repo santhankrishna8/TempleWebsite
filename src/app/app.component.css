@@ -1,24 +1,8 @@
-/* .logo {
-    height: 20vh;
-    width: 100%;
-    max-width: 100%; 
-    object-fit: contain;
+.foot {
+  border-top: 1px solid var(--line);
+  padding: 24px 16px 40px;
+  text-align: center;
+  color: var(--text-2);
+  font-size: 0.875rem;
 }
-
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .logo {
-        height: 25vh; 
-        width:;  
-    }
-} */
-
-body{
-    scroll-behavior: smooth;
-    border-top: 30px solid rgb(218, 104, 47);
-    border-bottom: 30px solid rgb(218, 104, 47);
-    border-left: 5px solid rgb(218, 104, 47);
-    border-right: 5px solid rgb(218, 104, 47);
-    border-radius: 15px;
-    margin: auto;
-}
-
+main { display: block; min-height: calc(100dvh - 160px); }

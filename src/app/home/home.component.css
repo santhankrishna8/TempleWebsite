@@ -1,135 +1,63 @@
-.slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* Set the maximum width of the slider */
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    width: 1400px; /* Set the width of each image */
-    height: 400px; /* Set the height of each image */
-    object-fit: contain; /* Cover the container, maintaining aspect ratio */
-    display: none;
-  }
-  
-  .active {
-    display: block;
-  }
-  
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    transition: 0.6s ease;
-    user-select: none;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-  }
-  .mandali-regular {
-    font-family: "Mandali", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-  .card{
-    width: 100%;
-    text-align: center;
-    scroll-behavior: smooth;
-    overflow-y: hidden;
-  }
-  pre{
-    overflow: hidden;
-  }
-  h5{
-    text-align: center;
-  }
-  .modal-title {
-    margin: 0; 
-  }
-  #modalImage {
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;       /* Adjust to 100% to make it responsive */
-    height: auto;     /* Maintain aspect ratio */
-    max-height: 100vh; /* Limit the maximum height to 80% of the viewport height */
-    object-fit: cover; /* Optional: cover the area while maintaining aspect ratio */
-  }
- 
-  
+.hero { text-align: center; }
 
-/* Mobile (up to 600px) */
-@media (max-width: 600px) {
-    .logo {
-        margin-top: -30px;
-        height: 25vh;
-        width: 100%;
-    }
-    img{
-        height:24vh;
+.banner {
+  background: #fff; /* banner art is drawn on white */
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 10px;
+  margin-bottom: 40px;
+}
+.banner img { width: 100%; height: auto; border-radius: 14px; }
 
-    }
-    nav{
-        margin-top: -30px;
-    }
-    .prev, .next {
-        font-size: 18px;
-        padding: 12px;
-      }
-    
-      .slider-container {
-        max-width: 100%;
-      }
-    
-      .slide {
-        width: 100%; /* Make the image full width on smaller screens */
-        height: 350px; /* Reduce the height for mobile */
-      }
+.hero .display { margin-top: 14px; }
+.actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+
+/* Native scroll-snap: 1:1 tracking, momentum and interruptibility for free */
+.gallery { margin: 56px -16px 0; }
+.track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding: 0 16px;
+  scroll-padding: 0 16px;
+}
+.track::-webkit-scrollbar { display: none; }
+.track img {
+  flex: none;
+  height: min(62vh, 520px);
+  width: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  scroll-snap-align: center;
+  background: var(--bg-2);
+  box-shadow: var(--shadow);
 }
 
-/* Tablet (601px to 1023px) */
-@media (min-width: 601px) and (max-width: 1023px) {
-    .logo {
-        height: 20vh;
-        width: 100%;
-    }
+.controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 16px; }
+.count { min-width: 64px; text-align: center; color: var(--text-2); font: 500 0.9375rem var(--sans); font-variant-numeric: tabular-nums; }
+
+.stack { display: grid; gap: 20px; margin-top: 56px; }
+.title {
+  text-align: center;
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
 }
 
-/* Laptop (1024px to 1440px) */
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .logo {
-        height: 25vh;  /* Adjust height for laptops */
-        width: 100%; 
-        
-    }
+@media (max-width: 720px) {
+  /* Banner art is wide: run it edge to edge so its text stays readable */
+  .banner { margin: -24px -16px 28px; padding: 6px; border-radius: 0; border-width: 0 0 1px; box-shadow: none; }
+  .banner img { border-radius: 0; }
+  .actions { margin-top: 22px; }
+  .gallery { margin-top: 36px; }
+  .track { gap: 10px; }
+  .track img { height: auto; width: 78vw; aspect-ratio: 4 / 5; border-radius: 20px; }
+  .stack { gap: 14px; margin-top: 36px; }
+  .title { font-size: 1.3rem; margin-bottom: 10px; }
 }

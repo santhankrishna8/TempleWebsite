@@ -1,46 +1,33 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { ReaderComponent } from '../reader/reader.component';
+import { PHOTOS } from '../photos/photos';
 
-declare const bootstrap: any;
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterLink, ReaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  slides: string[] = [
-    'assets/13.jpg',
-    'assets/16.jpg',
-    'assets/18.jpg',
-    'assets/12.jpg',
-    'assets/2.jpg',
-    'assets/3.jpg',
-    'assets/4.jpg',
-    'assets/5.jpg',
-    'assets/6.jpg',
-    'assets/7.jpg',
-    'assets/8.jpg',
-    'assets/9.jpg',
-    'assets/10.jpg',
-    'assets/1.jpg',
-    'assets/11.jpg',
-    'assets/14.jpg',
-    'assets/15.jpg',
-    'assets/17.jpg'
-  ];
+  slides = PHOTOS;
+  current = 0;
 
-  currentSlide = 0;
-
-  changeSlide(direction: number) {
-    this.currentSlide = (this.currentSlide + direction + this.slides.length) % this.slides.length;
-  }
-  openModal() {
-    // Use Bootstrap's JavaScript to show the modal
-    const modalElement = document.getElementById('simpleModal');
-    const modal = new bootstrap.Modal(modalElement!);
-    modal.show();
+  // Nearest slide to the track's centre — keeps the counter honest during free swipes.
+  onScroll(track: HTMLElement) {
+    const mid = track.scrollLeft + track.clientWidth / 2;
+    const imgs = Array.from(track.children) as HTMLElement[];
+    let best = 0;
+    imgs.forEach((img, i) => {
+      if (Math.abs(img.offsetLeft + img.offsetWidth / 2 - mid) <
+          Math.abs(imgs[best].offsetLeft + imgs[best].offsetWidth / 2 - mid)) best = i;
+    });
+    this.current = best;
   }
 
+  step(track: HTMLElement, dir: number) {
+    const next = (this.current + dir + this.slides.length) % this.slides.length;
+    (track.children[next] as HTMLElement).scrollIntoView({ inline: 'center', block: 'nearest' });
+  }
 }

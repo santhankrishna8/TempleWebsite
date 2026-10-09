@@ -1,22 +1,27 @@
-<div class="container text-center">
-    <header>
-      <img class="logo" src="../assets/image.png">
-    </header>
-    <nav>
-        <ul class="navbar">
-          <li >
-            <a class="nav-link" routerLink="/" href="/"  routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-          </li>
-          <li >
-            <a class="nav-link" routerLink="/pv" href="/pv"  routerLinkActive="active" ariaCurrentWhenActive="page">పూజ విధానం</a>
-          </li>
-          <li >
-            <a class="nav-link" routerLink="/photos" href="/photos"  routerLinkActive="active" ariaCurrentWhenActive="page">Photos</a>
-          </li>
-          <li >
-            <a  class="nav-link" routerLink = "/contact" href="/contact"  routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
-          </li>
-        </ul>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" routerLink="/">
+      <img src="assets/favicon.ico" alt="" width="28" height="28">
+      శ్రీ కృష్ణ భజన మందిరము
+    </a>
+    <!-- One nav: inline on desktop, fixed bottom tab bar on phones -->
+    <nav aria-label="ప్రధాన">
+      <a class="pressable" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span>హోమ్</span>
+      </a>
+      <a class="pressable" routerLink="/pv" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5zM4 19.5A1.5 1.5 0 0 0 5.5 21H20v-3"/></svg>
+        <span>పూజ విధానం</span>
+      </a>
+      <a class="pressable" routerLink="/photos" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+        <span>ఫోటోలు</span>
+      </a>
+      <a class="pressable" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span>సంప్రదించండి</span>
+      </a>
     </nav>
-</div>
-<br><br>
+  </div>
+</header>
