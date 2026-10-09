@@ -11,6 +11,7 @@
     @for (s of steps; track i; let i = $index) {
       <a [href]="'#s-' + i">{{ s.title }}</a>
     }
+    <a href="#s-gn">గోవింద నామాలు</a>
     <a href="#s-ash">అష్టోత్తరం</a>
     <a href="#s-sah">సహస్రనామావళి</a>
   </nav>
@@ -43,6 +44,11 @@
         </p>
       </li>
     }
+
+    <li class="reader" id="s-gn">
+      <app-reader title="గోవింద నామాలు" thumb="assets/gn.jpeg"
+                  [pages]="['assets/n1.jpg', 'assets/n2.jpg', 'assets/n3.jpg']"></app-reader>
+    </li>
 
     <li class="reader" id="s-ash">
       <app-reader title="అష్టోత్తర శతనామార్చన" thumb="assets/asn.png" [pages]="ashtothram"></app-reader>
