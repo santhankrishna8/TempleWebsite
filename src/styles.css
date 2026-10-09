@@ -22,29 +22,10 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --sans: "Noto Sans Telugu", system-ui, sans-serif;
   --display: "Ramabhadra", "Noto Sans Telugu", sans-serif;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
-/* Dark tokens: follow the system unless the toggle pinned a theme (html[data-theme]) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #12100e;
-    --bg-2: #1c1917;
-    --surface: #1c1917;
-    --text: #f5f5f4;
-    --text-2: #a8a29e;
-    --orange: #fb923c;
-    --on-orange: #1c1917;
-    --accent: #fdba74;
-    --accent-soft: #3b2412;
-    --line: #2e2a27;
-    --chrome: rgba(18, 16, 14, 0.8);
-    --chrome-solid: rgba(18, 16, 14, 0.97);
-    --scrim: rgba(0, 0, 0, 0.6);
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 24px 64px -24px rgba(0, 0, 0, 0.7);
-  }
-}
+/* Light is the default; dark only when chosen in Settings (html[data-theme="dark"]) */
 :root[data-theme="dark"] {
   --bg: #12100e;
   --bg-2: #1c1917;
@@ -64,6 +45,12 @@
 }
 :root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"] { color-scheme: dark; }
+
+/* Other languages: matching Noto family (Ramabhadra only has Telugu letters), headings bold to stand in for it */
+html[lang="en"] { --sans: "Noto Sans", system-ui, sans-serif; --display: var(--sans); }
+html[lang="ta"] { --sans: "Noto Sans Tamil", system-ui, sans-serif; --display: var(--sans); }
+html[lang="kn"] { --sans: "Noto Sans Kannada", system-ui, sans-serif; --display: var(--sans); }
+html:not([lang="te"]) :is(h1, h2, .display) { font-weight: 700 !important; }
 
 *, *::before, *::after { box-sizing: border-box; }
 

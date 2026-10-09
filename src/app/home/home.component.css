@@ -4,91 +4,57 @@
 .banner { background: #fff; border-bottom: 6px solid var(--orange); }
 .banner img { width: 100%; max-width: 1080px; height: auto; margin: 0 auto; }
 
-/* Gallery stage: contained, coverflow-style. Centre slide full size, neighbours recede. */
-.stage { max-width: 1080px; margin: 0 auto; padding: 48px 0 72px; --slide-w: min(380px, 70vw); }
-
-.head { display: flex; align-items: center; justify-content: flex-end; gap: 16px; padding: 0 16px; margin-bottom: 24px; }
-.ctrl { display: flex; align-items: center; gap: 10px; }
-.count { color: var(--text-2); font: 500 0.9375rem/1 var(--sans); font-variant-numeric: tabular-nums; margin-right: 6px; }
-.count b { color: var(--text); font-weight: 700; }
-.arrow {
-  width: 44px; height: 44px; border-radius: 50%;
-  display: grid; place-items: center;
-  border: 1px solid var(--line); background: var(--surface); color: var(--text);
-}
-@media (hover: hover) { .arrow:hover { background: var(--orange); border-color: var(--orange); color: var(--on-orange); } }
-
-/* Native scroll-snap track; side padding lets the first and last slide sit in the centre */
+/* Clean carousel: one photo at a time, native swipe; edge to edge on phones */
+.carousel { max-width: 640px; margin: 0 auto; padding: 32px 16px 56px; }
+.frame { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--bg-2); box-shadow: var(--shadow-lg); }
 .track {
-  position: relative;
   display: flex;
-  gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
-  padding: 12px calc(50% - var(--slide-w) / 2) 28px;
 }
 .track::-webkit-scrollbar { display: none; }
 .track:focus-visible { outline-offset: -3px; }
-
 .slide {
-  flex: none;
-  width: var(--slide-w);
+  flex: 0 0 100%;
+  width: 100%;
   aspect-ratio: 3 / 4;
-  margin: 0;
-  border-radius: var(--radius);
-  position: relative;
-  overflow: hidden;
+  object-fit: contain;
   scroll-snap-align: center;
-  background: var(--bg-2);
-  box-shadow: var(--shadow-lg);
-}
-/* Whole photo (contain) over a blurred copy of itself, so the spare space is not a flat box */
-.slide img { position: absolute; inset: 0; width: 100%; height: 100%; }
-.slide .bg { object-fit: cover; filter: blur(24px) brightness(0.6); transform: scale(1.2); }
-.slide .fg { object-fit: contain; }
-
-/* Coverflow: each slide scales by its own position in the scroller. CSS-only, no scroll listeners. */
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .slide { animation: focus linear both; animation-timeline: view(inline); }
-  }
-}
-@keyframes focus {
-  0%, 100% { scale: 0.82; }
-  50% { scale: 1; }
+  scroll-snap-stop: always;
 }
 
-/* Thumbnail strip */
-.thumbs {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding: 6px 16px;
-  margin-top: 8px;
-  justify-content: safe center;
+.count {
+  position: absolute; right: 12px; bottom: 12px;
+  padding: 4px 10px; border-radius: 999px;
+  background: rgba(0, 0, 0, 0.5); color: #fff;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  font: 600 0.8125rem/1.4 var(--sans); font-variant-numeric: tabular-nums;
 }
-.thumbs::-webkit-scrollbar { display: none; }
-.thumb {
-  flex: none;
-  width: 48px; height: 48px; /* 18 × (48 + 8) fits the 1080px stage */
-  padding: 0; border: 0; border-radius: 12px;
-  overflow: hidden; cursor: pointer;
-  opacity: 0.5;
-  outline: 2px solid transparent; outline-offset: 2px;
-  transition: opacity 200ms ease, outline-color 200ms ease, transform 200ms var(--ease);
+
+.arrow {
+  position: absolute; top: 50%; translate: 0 -50%;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 0; background: rgba(255, 255, 255, 0.85); color: #1c1917;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0; transition: opacity 200ms ease;
 }
-.thumb img { width: 100%; height: 100%; object-fit: cover; }
-.thumb.on { opacity: 1; outline-color: var(--orange); transform: translateY(-2px); }
-@media (hover: hover) { .thumb:hover { opacity: 1; } }
+.prev { left: 12px; }
+.next { right: 12px; }
+.frame:hover .arrow, .arrow:focus-visible { opacity: 1; }
+
+/* Progress dashes: the current photo's dash stretches */
+.dashes { display: flex; justify-content: center; gap: 4px; margin-top: 14px; }
+.dashes span { width: 6px; height: 4px; border-radius: 2px; background: var(--line); transition: width 300ms var(--ease), background-color 300ms ease; }
+.dashes span.on { width: 20px; background: var(--orange); }
+
+/* Touch screens swipe; arrows only where there's a mouse */
+@media (hover: none) { .arrow { display: none; } }
 
 @media (max-width: 720px) {
-  .stage { padding: 32px 0 40px; --slide-w: 72vw; }
-  .head { margin-bottom: 16px; }
-  .count { display: none; }
-  .arrow { width: 40px; height: 40px; }
-  .track { gap: 12px; padding-bottom: 20px; }
-  .thumb { width: 46px; height: 46px; border-radius: 10px; }
+  .carousel { padding: 0 0 32px; }
+  .frame { border-radius: 0; box-shadow: none; }
+  .dashes { gap: 3px; }
 }

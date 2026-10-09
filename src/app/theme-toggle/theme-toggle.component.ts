@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 
-// Light/dark switch styled like a tab: outline sun/moon icon (rotates as it swaps) + label on phones,
-// a plain round icon button on desktop. Theme lives on <html data-theme>, saved in localStorage.
+// Light/dark switch: just a sun/moon icon that rotates as it swaps. Fills its tab slot on phones,
+// a round icon button on desktop. Theme lives on <html data-theme>, saved in localStorage.
 
 type Theme = 'light' | 'dark';
-const FADE = 400;
 
-const currentTheme = (): Theme => {
-  const set = document.documentElement.dataset['theme'];
-  return set === 'light' || set === 'dark' ? set : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
+const currentTheme = (): Theme =>
+  document.documentElement.dataset['theme'] === 'dark' ? 'dark' : 'light'; // light unless the visitor picked dark
 
 @Component({
   selector: 'app-theme-toggle',
@@ -21,7 +18,6 @@ const currentTheme = (): Theme => {
         <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-17.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </span>
-      <span class="label">{{ theme === 'dark' ? 'డార్క్' : 'లైట్' }}</span>
     </button>
   `,
   styles: `
@@ -42,7 +38,6 @@ const currentTheme = (): Theme => {
     .moon { opacity: 0; transform: rotate(-90deg) scale(0.5); }
     .dark .sun { opacity: 0; transform: rotate(90deg) scale(0.5); }
     .dark .moon { opacity: 1; transform: none; fill: var(--accent-soft); }
-    .label { display: none; }
 
     /* Phones: sits in the bottom tab bar, so look like the other tabs */
     @media (max-width: 720px) {
@@ -53,29 +48,16 @@ const currentTheme = (): Theme => {
         border: 0; border-radius: 14px;
         background: none; color: var(--text-2);
       }
-      .icon { width: 24px; height: 24px; }
-      .label { display: block; font-size: 0.75rem; line-height: 1.4; }
+      .icon { width: 26px; height: 26px; }
     }
   `
 })
 export class ThemeToggleComponent {
   theme: Theme = currentTheme();
-  private fadeTimer = 0;
 
   toggle() {
     this.theme = this.theme === 'dark' ? 'light' : 'dark';
     try { localStorage.setItem('theme', this.theme); } catch { /* private mode: theme just won't persist */ }
-    this.fadePage();
-    document.documentElement.dataset['theme'] = this.theme;
-  }
-
-  // Ease the page colours instead of an abrupt brightness jump (temporary global transition rule).
-  private fadePage() {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const id = 'theme-fade';
-    const style = document.getElementById(id) ?? document.head.appendChild(Object.assign(document.createElement('style'), { id }));
-    style.textContent = `*:not(svg), *::before, *::after { transition-property: color, background-color, border-color, fill, stroke !important; transition-duration: ${FADE}ms !important; transition-timing-function: ease !important; transition-delay: 0s !important; }`;
-    clearTimeout(this.fadeTimer);
-    this.fadeTimer = window.setTimeout(() => style.remove(), FADE + 100);
+    document.documentElement.dataset['theme'] = this.theme; // applied immediately: state and page never disagree
   }
 }
