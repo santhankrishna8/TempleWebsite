@@ -1,111 +1,38 @@
-<div class="page">
-  <section class="hero">
-    <div class="banner">
-      <img src="assets/image.png" width="1131" height="306"
-           alt="శ్రీ కృష్ణ భజన మందిరము — శ్రీ రుక్మిణి, సత్యభామ సమేత శ్రీ వేణుగోపాల స్వామి ఆలయము, పేరూరు">
-    </div>
-    <p class="eyebrow">కృష్ణం వందే జగద్గురుం</p>
-    <h1 class="display">గోవింద మాల పూజ విధానం</h1>
-    <p class="lede">వకుళ నందన గోవిందా గోవిందా</p>
-    <div class="actions">
-      <a class="btn pressable" routerLink="/pv">పూజ విధానం చూడండి</a>
-      <a class="btn ghost pressable" routerLink="/contact">దారి తెలుసుకోండి</a>
-    </div>
-  </section>
+<h1 class="sr-only">శ్రీ కృష్ణ భజన మందిరము, పేరూరు</h1>
 
-  <section class="gallery" aria-roledescription="carousel" aria-label="ఆలయ చిత్రాలు">
-    <div #track class="track" (scroll)="onScroll(track)" tabindex="0">
-      @for (s of slides; track s; let i = $index) {
-        <img [src]="s" [alt]="'ఆలయ చిత్రం ' + (i + 1)" [attr.loading]="i < 2 ? 'eager' : 'lazy'">
-      }
-    </div>
-    <div class="controls">
-      <button type="button" class="icon-btn pressable" aria-label="మునుపటి" (click)="step(track, -1)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
-      </button>
-      <span class="count" aria-live="polite">{{ current + 1 }} / {{ slides.length }}</span>
-      <button type="button" class="icon-btn pressable" aria-label="తదుపరి" (click)="step(track, 1)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </button>
-    </div>
-  </section>
-
-  <section class="stack">
-    <article class="card">
-      <h2 class="title">ఓం నమోభగవతే</h2>
-      <p class="verses">
-        <span>శ్రీ విఘ్నేశ్వర స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ వరాహ స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ గోవింద రాజు స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ కృష్ణ స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ ఆంజనేయ స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ వరదరాజస్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ నరసింహ స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ సీతా రామ స్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ పార్వతీ పరమేశ్వరస్వామి పరబ్రహ్మనే నమః</span>
-        <span>శ్రీ లక్ష్మీ వేంకటేశ్వరస్వామి పరబ్రహ్మనే నమః</span>
-      </p>
-    </article>
-
-    <article class="card">
-      <h2 class="title">గోవింద నామం</h2>
-      <p class="verses">
-        <span>శేషాద్రి నిలయా గోవిందా</span>
-        <span>గరుడాద్రినిలయా గోవిందా</span>
-        <span>పృషభాద్రి నిలయా గోవిందా</span>
-        <span>అంజనాద్రి నిలయా గోవింద</span>
-        <span>నీలాద్రి నిలయా గోవిందా</span>
-        <span>వెంకటాద్రి నిలయా గోవిందా</span>
-        <span>నారాయణాద్రి నిలయా గోవిందా</span>
-        <span>తల్లి తండ్రివని గోవిందా</span>
-        <span>మిమ్ము నమ్మితిమి గోవిందా</span>
-        <span>మీ పదములనూ గోవిందా</span>
-        <span>ఆశ్రయించింతమి గోవిందా</span>
-        <span>మమ్ము బ్రోవుమూ గోవిందా</span>
-        <span>మా మోరలింపుము గోవిందా</span>
-        <span>శ్రీ శ్రీనివాస గోవిందా</span>
-        <span>శ్రీ వెంకటేశ గోవిందా</span>
-      </p>
-    </article>
-
-    <app-reader title="గోవింద నామాలు" thumb="assets/gn.jpeg"
-                [pages]="['assets/n1.jpg', 'assets/n2.jpg', 'assets/n3.jpg']"></app-reader>
-
-    <article class="card">
-      <h2 class="title">క్షమా ప్రార్థన</h2>
-      <p class="verses">
-        <span>జ్ఞానము తోనూ అజ్ఞానము తోనూ తెలిసీ,</span>
-        <span>తెలియక మేము చేయు సకల తప్పులను క్షమించి</span>
-        <span>మన్నించి కాపాడ వలెను.</span>
-        <span>తిరు నామము,</span>
-        <span>శెంకుచక్రము,</span>
-        <span>లక్ష్మి హారములు దరించి</span>
-        <span>ఏడు కొండలపై వెలసియుండు</span>
-        <span>ఓ కలియుగ వరదా</span>
-        <span>ఓ కోనేటిరాయా</span>
-        <span>ఓ మలయప్ప స్వామి</span>
-        <span>ఓ తిరుమలరాయా</span>
-        <span>ఓ వకుళా నందనా</span>
-        <span>ఓ లక్ష్మీ వెంకటేశ్వర స్వామీ</span>
-        <span>మీ పాదారవిందములే మాకు శరణం శరణం</span>
-      </p>
-    </article>
-
-    <article class="card">
-      <h2 class="title">మంగళం</h2>
-      <p class="verses">
-        <span>ఓం నారాయణ ఓం నారాయణ ఓం నారాయణ</span>
-        <span>సర్వేజనా సుఖినోభవంతు</span>
-        <span>సమస్త సమంగళాని రస్తు</span>
-        <span>పుత్తరోత్తరాభి వృద్ధి రస్తు</span>
-        <span>సర్వం శ్రీ లక్ష్మీ వేంకటేశ్వరార్పణమస్తు.</span>
-        <span>సర్వం శ్రీ సీతా రామచంద్రార్పణ మస్తు.</span>
-        <span>సర్వం శ్రీ పార్వతీ పరమేశ్వరార్పణ మస్తు.</span>
-        <span>సర్వం శ్రీ ఆంజనేయార్పణ మస్తు</span>
-        <span>సర్వం శ్రీ కృష్ణార్పణమస్తు</span>
-        <span>శాంతి-శాంతి- శాంతిః</span>
-        <span>హరిః ఓం తత్-సత్</span>
-      </p>
-    </article>
-  </section>
+<div class="banner">
+  <img src="assets/image.png" width="1131" height="306" fetchpriority="high"
+       alt="శ్రీ కృష్ణ భజన మందిరము — శ్రీ రుక్మిణి, సత్యభామ సమేత శ్రీ వేణుగోపాల స్వామి ఆలయము, పేరూరు">
 </div>
+
+<section class="stage" aria-roledescription="carousel" aria-label="ఆలయ చిత్రాలు">
+  <div class="head">
+    <div class="ctrl">
+      <span class="count" aria-live="polite"><b>{{ pad(current + 1) }}</b> / {{ pad(slides.length) }}</span>
+      <button type="button" class="arrow pressable" aria-label="మునుపటి" (click)="go(track, thumbs, current - 1)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button type="button" class="arrow pressable" aria-label="తదుపరి" (click)="go(track, thumbs, current + 1)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div #track class="track" (scroll)="onScroll(track, thumbs)" tabindex="0">
+    @for (s of slides; track s; let i = $index) {
+      <figure class="slide" role="group" aria-roledescription="slide" [attr.aria-label]="(i + 1) + ' / ' + slides.length">
+        <img class="bg" [src]="s" alt="" aria-hidden="true" [attr.loading]="i < 3 ? 'eager' : 'lazy'">
+        <img class="fg" [src]="s" [alt]="'ఆలయ చిత్రం ' + (i + 1)" [attr.loading]="i < 3 ? 'eager' : 'lazy'">
+      </figure>
+    }
+  </div>
+
+  <div #thumbs class="thumbs">
+    @for (s of slides; track s; let i = $index) {
+      <button type="button" class="thumb" [class.on]="i === current" [attr.aria-label]="'చిత్రం ' + (i + 1)"
+              [attr.aria-current]="i === current" (click)="go(track, thumbs, i)">
+        <img [src]="s" alt="" loading="lazy">
+      </button>
+    }
+  </div>
+</section>

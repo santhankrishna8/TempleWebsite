@@ -35,7 +35,7 @@ import { Component, Input } from '@angular/core';
     }
     .tile img { width: 132px; height: auto; aspect-ratio: 300 / 168; object-fit: cover; border-radius: 14px; flex: none; }
     .tile-text { display: grid; gap: 4px; }
-    .tile strong { font: 700 1.3rem/1.4 var(--serif); color: var(--accent); }
+    .tile strong { font: 400 1.3rem/1.4 var(--display); color: var(--text); }
     @media (max-width: 720px) {
       .tile { gap: 14px; padding: 12px; }
       .tile img { width: 88px; aspect-ratio: 1; border-radius: 12px; }

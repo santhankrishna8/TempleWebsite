@@ -1,5 +1,3 @@
-.intro { text-align: center; margin-bottom: 40px; }
-.intro .display { margin-top: 8px; }
 
 .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 
@@ -9,8 +7,8 @@
   text-decoration: none;
   color: inherit;
 }
-.role { color: var(--gold); font-weight: 600; font-size: 0.9375rem; }
-.person strong { font-family: var(--serif); }
+.role { color: var(--accent); font-weight: 600; font-size: 0.9375rem; }
+.person strong { font-family: var(--display); font-weight: 400; }
 .person strong { font-size: 1.375rem; }
 .phone {
   display: inline-flex; align-items: center; gap: 8px;
@@ -28,7 +26,6 @@
 }
 
 @media (max-width: 720px) {
-  .intro { margin-bottom: 24px; }
   .people { gap: 12px; }
   .person strong { font-size: 1.2rem; }
   .map { margin-top: 16px; }

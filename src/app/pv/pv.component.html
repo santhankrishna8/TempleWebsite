@@ -1,27 +1,43 @@
 <div class="page">
-  <header class="intro">
-    <p class="eyebrow">శ్రీ వేంకటేశ్వర స్వామి</p>
+  <header class="page-head">
     <h1 class="display">పూజ విధానం</h1>
-    <p class="lede">క్రమంగా ఒక్కో ఘట్టం — ప్రార్థన నుండి అష్టోత్తర శతనామార్చన వరకు.</p>
   </header>
 
-  <nav class="jump" aria-label="ఘట్టాలు">
+  <nav class="jump" aria-label="ఘట్టాలు" (click)="jump($event)">
     <a href="#s-v">విష్వక్సేన</a>
+    <a href="#s-onb">ఓం నమోభగవతే</a>
     <a href="#s-sp">సుప్రభాతం</a>
     @for (s of steps; track i; let i = $index) {
       <a [href]="'#s-' + i">{{ s.title }}</a>
     }
     <a href="#s-gn">గోవింద నామాలు</a>
+    <a href="#s-gnm">గోవింద నామం</a>
     <a href="#s-ash">అష్టోత్తరం</a>
     <a href="#s-sah">సహస్రనామావళి</a>
+    <a href="#s-kara">కరావలంబం</a>
+    <a href="#s-lak">లక్ష్మీ అష్టోత్తరం</a>
+    <a href="#s-mla">మహాలక్ష్మ్యష్టకం</a>
+    <a href="#s-vajra">వజ్రకవచం</a>
+    <a href="#s-kshama">క్షమా ప్రార్థన</a>
+    <a href="#s-mangalam">మంగళాశాసనం</a>
   </nav>
 
   <ol class="steps">
     <li class="card" id="s-v">
       <h2>విష్వక్సేన ప్రార్థన</h2>
       <p class="verses">
-        <span>యస్య ద్విరదవశ్రాద్యాః పారిషద్యాః పరశ్శతమ్</span>
-        <span>విఘ్నం నిఘ్నంతి సతతం విష్వక్సేనం తమాశ్రయే</span>
+        @for (l of vishvaksena; track $index) {
+          <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
+        }
+      </p>
+    </li>
+
+    <li class="card" id="s-onb">
+      <h2>ఓం నమోభగవతే</h2>
+      <p class="verses">
+        @for (l of onb; track $index) {
+          <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
+        }
       </p>
     </li>
 
@@ -38,16 +54,24 @@
       <li class="card" [id]="'s-' + i">
         <h2>{{ s.title }}</h2>
         <p class="verses">
-          @for (l of s.lines; track $index) {
-            <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
-          }
-        </p>
+        @for (l of s.lines; track $index) {
+          <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
+        }
+      </p>
       </li>
     }
 
     <li class="reader" id="s-gn">
-      <app-reader title="గోవింద నామాలు" thumb="assets/gn.jpeg"
-                  [pages]="['assets/n1.jpg', 'assets/n2.jpg', 'assets/n3.jpg']"></app-reader>
+      <app-stotra [s]="st.gn"></app-stotra>
+    </li>
+
+    <li class="card" id="s-gnm">
+      <h2>గోవింద నామం</h2>
+      <p class="verses">
+        @for (l of gnm; track $index) {
+          <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
+        }
+      </p>
     </li>
 
     <li class="reader" id="s-ash">
@@ -67,5 +91,17 @@
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </li>
+
+    <li id="s-kara"><app-stotra [s]="st.kara"></app-stotra></li>
+
+    <li id="s-lak"><app-stotra [s]="st.lak"></app-stotra></li>
+
+    <li id="s-mla"><app-stotra [s]="st.mla"></app-stotra></li>
+
+    <li id="s-vajra"><app-stotra [s]="st.vajra"></app-stotra></li>
+
+    <li id="s-kshama"><app-stotra [s]="st.kshama"></app-stotra></li>
+
+    <li id="s-mangalam"><app-stotra [s]="st.mangalam"></app-stotra></li>
   </ol>
 </div>
