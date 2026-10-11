@@ -14,12 +14,13 @@
     <a href="#s-gnm">గోవింద నామం</a>
     <a href="#s-ash">అష్టోత్తరం</a>
     <a href="#s-sah">సహస్రనామావళి</a>
-    <a href="#s-kara">కరావలంబం</a>
     <a href="#s-lak">లక్ష్మీ అష్టోత్తరం</a>
     <a href="#s-mla">మహాలక్ష్మ్యష్టకం</a>
+    <a href="#s-kara">కరావలంబం</a>
     <a href="#s-vajra">వజ్రకవచం</a>
-    <a href="#s-kshama">క్షమా ప్రార్థన</a>
     <a href="#s-mangalam">మంగళాశాసనం</a>
+    <a href="#s-kshama">జ్ఞానము తోనూ</a>
+    <a href="#s-shanti">శాంతి మంత్రం</a>
   </nav>
 
   <ol class="steps">
@@ -92,16 +93,25 @@
       </div>
     </li>
 
-    <li id="s-kara"><app-stotra [s]="st.kara"></app-stotra></li>
-
     <li id="s-lak"><app-stotra [s]="st.lak"></app-stotra></li>
 
     <li id="s-mla"><app-stotra [s]="st.mla"></app-stotra></li>
 
+    <li id="s-kara"><app-stotra [s]="st.kara"></app-stotra></li>
+
     <li id="s-vajra"><app-stotra [s]="st.vajra"></app-stotra></li>
+
+    <li id="s-mangalam"><app-stotra [s]="st.mangalam"></app-stotra></li>
 
     <li id="s-kshama"><app-stotra [s]="st.kshama"></app-stotra></li>
 
-    <li id="s-mangalam"><app-stotra [s]="st.mangalam"></app-stotra></li>
+    <li class="card" id="s-shanti">
+      <h2>శాంతి మంత్రం</h2>
+      <p class="verses">
+        @for (l of shanti; track $index) {
+          <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
+        }
+      </p>
+    </li>
   </ol>
 </div>
