@@ -108,6 +108,7 @@ const UI: Record<string, Partial<Record<Lang, string>>> = {
   'పూజ విధానం': { en: 'Puja Vidhanam', ta: 'பூஜா விதானம்', kn: 'ಪೂಜಾ ವಿಧಾನ' },
   'ఫోటోలు': { en: 'Photos', ta: 'படங்கள்', kn: 'ಫೋಟೋಗಳು' },
   'సంప్రదించండి': { en: 'Contact', ta: 'தொடர்பு', kn: 'ಸಂಪರ್ಕಿಸಿ' },
+  'కార్యక్రమాలు': { en: 'Schedule', ta: 'நிகழ்ச்சிகள்', kn: 'ಕಾರ್ಯಕ್ರಮಗಳು' },
   'ప్రధాన': { en: 'Main', ta: 'முதன்மை', kn: 'ಮುಖ್ಯ' },
   'ఫుటర్': { en: 'Footer', ta: 'அடிக்குறிப்பு', kn: 'ಅಡಿಟಿಪ್ಪಣಿ' },
   'సెట్టింగ్స్': { en: 'Settings', ta: 'அமைப்பு', kn: 'ಸೆಟ್ಟಿಂಗ್ಸ್' },  // short: also the phone tab label
