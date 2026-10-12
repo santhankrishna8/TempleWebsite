@@ -11,7 +11,6 @@
       <a [href]="'#s-' + i">{{ s.title }}</a>
     }
     <a href="#s-gn">గోవింద నామాలు</a>
-    <a href="#s-gnm">గోవింద నామం</a>
     <a href="#s-arc">అర్చన</a>
     <a href="#s-ash">అష్టోత్తరం</a>
     <a href="#s-sah">సహస్రనామావళి</a>
@@ -68,7 +67,6 @@
     </li>
 
     <li class="card" id="s-gnm">
-      <h2>గోవింద నామం</h2>
       <p class="verses">
         @for (l of gnm; track $index) {
           <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
@@ -94,8 +92,8 @@
       </div>
     </li>
 
-    <li class="card" id="s-sah">
-      <h2>సహస్రనామావళి</h2>
+    <li id="s-sah">
+      <app-stotra [s]="st.sah"></app-stotra>
       <div class="video">
         <iframe src="https://www.youtube.com/embed/Q3vXOMfzGqE?si=4xKz1blpoYsN6eZ1" title="సహస్రనామావళి — YouTube"
           loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
