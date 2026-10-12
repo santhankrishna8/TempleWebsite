@@ -12,6 +12,7 @@
     }
     <a href="#s-gn">గోవింద నామాలు</a>
     <a href="#s-gnm">గోవింద నామం</a>
+    <a href="#s-arc">అర్చన</a>
     <a href="#s-ash">అష్టోత్తరం</a>
     <a href="#s-sah">సహస్రనామావళి</a>
     <a href="#s-lak">లక్ష్మీ అష్టోత్తరం</a>
@@ -71,6 +72,15 @@
       <p class="verses">
         @for (l of gnm; track $index) {
           <span [class.note]="l.startsWith('(')" [innerHTML]="l"></span>
+        }
+      </p>
+    </li>
+
+    <li class="card" id="s-arc">
+      <h2>అర్చన</h2>
+      <p class="verses">
+        @for (l of archana; track $index) {
+          <span [innerHTML]="l"></span>
         }
       </p>
     </li>
