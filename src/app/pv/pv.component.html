@@ -18,6 +18,7 @@
     <a href="#s-mla">మహాలక్ష్మ్యష్టకం</a>
     <a href="#s-kara">కరావలంబం</a>
     <a href="#s-vajra">వజ్రకవచం</a>
+    <a href="#s-bhajana">భజన</a>
     <a href="#s-mangalam">మంగళాశాసనం</a>
     <a href="#s-kshama">జ్ఞానము తోనూ</a>
     <a href="#s-shanti">శాంతి మంత్రం</a>
@@ -108,6 +109,15 @@
     <li id="s-mla"><app-stotra [s]="st.mla"></app-stotra></li>
 
     <li id="s-vajra"><app-stotra [s]="st.vajra"></app-stotra></li>
+
+    <li class="card" id="s-bhajana">
+      <h2>భజన</h2>
+      @for (v of bhajana; track $index) {
+        <p class="verses">
+          @for (l of v; track $index) { <span>{{ l }}</span> }
+        </p>
+      }
+    </li>
 
     <li id="s-mangalam"><app-stotra [s]="st.mangalam"></app-stotra></li>
 

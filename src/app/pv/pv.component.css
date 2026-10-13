@@ -14,6 +14,7 @@
 }
 
 .verses { font-size: 1.125rem; }
+.verses + .verses { margin-top: 16px; }
 
 /* Sticky step chips: jump anywhere in a long ritual with one thumb */
 .jump {
